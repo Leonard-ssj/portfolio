@@ -33,12 +33,14 @@ export function ProjectsSection() {
           <SectionTitle>{t(content.projects.title)}</SectionTitle>
         </Reveal>
 
-        <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.12}>
+        <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center" staggerDelay={0.12}>
           {items.map((project, i) => {
             const Icon = typeIcons[project.type] || Code2
             return (
-              <StaggerItem key={i}>
-                <div className="glass-card group flex h-full flex-col rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5">
+              <StaggerItem key={i} className="h-full w-full">
+                <div className="group relative h-full w-full max-w-[380px]">
+                  <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-br from-primary/15 via-transparent to-primary/15 opacity-0 blur transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className="glass-card relative flex h-full flex-col rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5">
                   <div className="mb-4 h-px w-full overflow-hidden rounded-full bg-border/60">
                     <div className="h-full w-full animate-shimmer opacity-20" />
                   </div>
@@ -94,6 +96,7 @@ export function ProjectsSection() {
                         {t({ es: "Sin repositorio publico por ahora", en: "No public repository yet" })}
                       </span>
                     )}
+                  </div>
                   </div>
                 </div>
               </StaggerItem>

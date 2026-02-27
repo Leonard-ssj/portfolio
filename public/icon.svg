@@ -1,17 +1,115 @@
-<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @media (prefers-color-scheme: light) {
-      .background { fill: #0b1220; }
-      .foreground { fill: #ffffff; }
-    }
-    @media (prefers-color-scheme: dark) {
-      .background { fill: #ffffff; }
-      .foreground { fill: #0b1220; }
-    }
-  </style>
-  <rect class="background" width="180" height="180" rx="38" />
-  <g class="foreground" transform="translate(34 44)">
-    <path d="M0 0H18V74H52V92H0V0Z" />
-    <path d="M74 92H54L82 0H102L130 92H110L104.5 74H79.5L74 92ZM84.5 58H99.5L92 32L84.5 58Z" />
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <!-- Fondo base más verdoso -->
+    <radialGradient id="base" cx="50%" cy="35%" r="95%">
+      <stop offset="0%" stop-color="#07161A"/>
+      <stop offset="55%" stop-color="#040D10"/>
+      <stop offset="100%" stop-color="#02070A"/>
+    </radialGradient>
+
+    <!-- Haze teal/verde (mancha suave) -->
+    <radialGradient id="hazeA" cx="32%" cy="78%" r="62%">
+      <stop offset="0%" stop-color="#0FC9B7" stop-opacity="0.28"/>
+      <stop offset="45%" stop-color="#0FC9B7" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#0FC9B7" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="hazeB" cx="58%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#0FC9B7" stop-opacity="0.12"/>
+      <stop offset="60%" stop-color="#0FC9B7" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#0FC9B7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Viñeta suave -->
+    <radialGradient id="vignette" cx="50%" cy="45%" r="85%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.58"/>
+    </radialGradient>
+
+    <!-- Grano / textura -->
+    <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 .12 0"/>
+    </filter>
+
+    <!-- Blur para haze -->
+    <filter id="softBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+
+    <!-- Brillo para estrellas -->
+    <filter id="starGlow" x="-200%" y="-200%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gradiente texto -->
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F2FAFF"/>
+      <stop offset="100%" stop-color="#B8E6FF"/>
+    </linearGradient>
+
+    <!-- Sombra suave para texto -->
+    <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feOffset dx="0" dy="2" result="off"/>
+      <feMerge>
+        <feMergeNode in="off"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base -->
+  <rect width="512" height="512" fill="url(#base)"/>
+
+  <!-- Haze -->
+  <ellipse cx="170" cy="410" rx="250" ry="140" fill="url(#hazeA)" filter="url(#softBlur)"/>
+  <ellipse cx="300" cy="290" rx="180" ry="120" fill="url(#hazeB)" filter="url(#softBlur)"/>
+
+  <!-- Viñeta -->
+  <rect width="512" height="512" fill="url(#vignette)"/>
+
+  <!-- Estrellitas / puntos -->
+  <g fill="#22E6D2" opacity="0.85" filter="url(#starGlow)">
+    <circle cx="468" cy="76" r="2.0"/>
+    <circle cx="452" cy="96" r="1.2" opacity="0.55"/>
+    <circle cx="398" cy="130" r="1.0" opacity="0.45"/>
+    <circle cx="308" cy="240" r="1.6" opacity="0.70"/>
+    <circle cx="140" cy="190" r="1.0" opacity="0.40"/>
+    <circle cx="88"  cy="270" r="1.4" opacity="0.55"/>
+    <circle cx="62"  cy="150" r="0.9" opacity="0.30"/>
+    <circle cx="190" cy="115" r="0.9" opacity="0.30"/>
+    <circle cx="255" cy="165" r="0.8" opacity="0.25"/>
+    <circle cx="350" cy="330" r="0.8" opacity="0.22"/>
+    <circle cx="418" cy="372" r="1.0" opacity="0.30"/>
+    <circle cx="260" cy="430" r="0.7" opacity="0.18"/>
   </g>
+
+  <!-- Grano encima -->
+  <rect width="512" height="512" filter="url(#grain)" opacity="0.9"/>
+
+  <!-- Monograma LA -->
+  <text x="256" y="370"
+        text-anchor="middle"
+        textLength="400" 
+        lengthAdjust="spacingAndGlyphs"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+        font-size="320"
+        font-weight="800"
+        letter-spacing="4"
+        fill="url(#textGrad)"
+        filter="url(#textShadow)">
+    LA
+  </text>
+
+  <!-- Acento tipo punto (opcional, queda bien) -->
+  <circle cx="352" cy="332" r="5.5" fill="#22E6D2" opacity="0.9" filter="url(#starGlow)"/>
 </svg>

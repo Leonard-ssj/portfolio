@@ -170,3 +170,81 @@
   background-size: 200% 100%;
   animation: shimmer 3s ease-in-out infinite;
 }
+
+html.has-custom-cursor body {
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.custom-cursor[data-visible="false"] .cursor-ring,
+.custom-cursor[data-visible="false"] .cursor-dot {
+  opacity: 0;
+}
+
+.cursor-ring,
+.cursor-dot {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition:
+    opacity 160ms ease,
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+  will-change: left, top, transform;
+}
+
+.cursor-ring {
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in oklch, var(--primary) 70%, transparent);
+  background: transparent;
+  box-shadow: 0 0 0 0 color-mix(in oklch, var(--primary) 0%, transparent);
+}
+
+.cursor-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: var(--primary);
+  box-shadow: 0 0 0 6px color-mix(in oklch, var(--primary) 0%, transparent);
+}
+
+.custom-cursor[data-state="default"] .cursor-ring {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.custom-cursor[data-state="default"] .cursor-dot {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.custom-cursor[data-state="hover"] .cursor-ring {
+  transform: translate(-50%, -50%) scale(1.32);
+  border-color: color-mix(in oklch, var(--primary) 90%, transparent);
+  background: color-mix(in oklch, var(--primary) 14%, transparent);
+  box-shadow: 0 0 0 10px color-mix(in oklch, var(--primary) 10%, transparent);
+  mix-blend-mode: difference;
+}
+
+.custom-cursor[data-state="hover"] .cursor-dot {
+  transform: translate(-50%, -50%) scale(0.85);
+}
+
+.custom-cursor[data-state="down"] .cursor-ring {
+  transform: translate(-50%, -50%) scale(0.92);
+  background: color-mix(in oklch, var(--primary) 18%, transparent);
+}
+
+.custom-cursor[data-state="down"] .cursor-dot {
+  transform: translate(-50%, -50%) scale(0.7);
+}

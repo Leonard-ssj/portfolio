@@ -61,8 +61,17 @@ export function Header() {
     return () => { document.body.style.overflow = "" }
   }, [mobileOpen])
 
-  const handleNavClick = (anchor: string) => {
+  const handleNavClick = (anchor: string, e?: React.MouseEvent<HTMLAnchorElement>) => {
     setMobileOpen(false)
+    if (isHome) {
+      e?.preventDefault()
+      const el = document.getElementById(anchor)
+      if (!el) return
+      const y = el.getBoundingClientRect().top + window.scrollY - 80
+      window.scrollTo({ top: Math.max(0, y), behavior: "smooth" })
+      history.pushState(null, "", `#${anchor}`)
+      return
+    }
     if (!isHome) {
       window.location.href = `/#${anchor}`
     }
@@ -92,8 +101,8 @@ export function Header() {
             return (
               <a
                 key={anchor}
-                href={`/#${anchor}`}
-                onClick={() => handleNavClick(anchor)}
+                href={isHome ? `#${anchor}` : `/#${anchor}`}
+                onClick={(e) => handleNavClick(anchor, e)}
                 className={cn(
                   "relative px-3 py-2 text-sm font-medium transition-colors rounded-md",
                   activeSection === anchor && isHome
@@ -161,8 +170,8 @@ export function Header() {
             {navLabels.map((label, i) => (
               <a
                 key={navAnchors[i]}
-                href={`/#${navAnchors[i]}`}
-                onClick={() => handleNavClick(navAnchors[i])}
+                href={isHome ? `#${navAnchors[i]}` : `/#${navAnchors[i]}`}
+                onClick={(e) => handleNavClick(navAnchors[i], e)}
                 className={cn(
                   "px-3 py-2.5 text-sm font-medium rounded-md transition-colors",
                   activeSection === navAnchors[i] && isHome

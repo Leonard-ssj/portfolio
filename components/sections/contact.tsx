@@ -37,11 +37,13 @@ function FieldError({ error }: { error?: string }) {
 export function ContactSection() {
   const { t } = useLang()
   const [copied, setCopied] = useState(false)
+  const [copiedPhone, setCopiedPhone] = useState(false)
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
   const [errors, setErrors] = useState<FormErrors>({})
   const [touched, setTouched] = useState<Record<string, boolean>>({})
 
-  const telHref = `tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`
+  const telNumber = siteConfig.phone.replace(/[^\d+]/g, "")
+  const telHref = `tel:${telNumber}`
   const mailHref = `mailto:${siteConfig.email}`
 
   const copyEmail = useCallback(() => {
@@ -49,6 +51,12 @@ export function ContactSection() {
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }, [])
+
+  const copyPhone = useCallback(() => {
+    navigator.clipboard.writeText(telNumber)
+    setCopiedPhone(true)
+    setTimeout(() => setCopiedPhone(false), 2000)
+  }, [telNumber])
 
   const validationMessages = {
     nameRequired: t({ es: "El nombre es obligatorio", en: "Name is required" }),
@@ -238,12 +246,22 @@ export function ContactSection() {
                         {siteConfig.phone}
                       </a>
                     </div>
-                    <Button variant="outline" size="sm" asChild>
-                      <a href={telHref} aria-label={t({ es: "Llamar", en: "Call" })}>
-                        <Phone className="size-4" />
-                        {t({ es: "Llamar", en: "Call" })}
-                      </a>
-                    </Button>
+                    <div className="flex items-center gap-2">
+                      <Button variant="outline" size="sm" asChild>
+                        <a href={telHref} aria-label={t({ es: "Llamar", en: "Call" })}>
+                          <Phone className="size-4" />
+                          {t({ es: "Llamar", en: "Call" })}
+                        </a>
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="icon-sm"
+                        onClick={copyPhone}
+                        aria-label={t({ es: "Copiar telefono", en: "Copy phone" })}
+                      >
+                        {copiedPhone ? <Check className="size-4 text-primary" /> : <Copy className="size-4" />}
+                      </Button>
+                    </div>
                   </div>
                 </StaggerItem>
 

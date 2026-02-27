@@ -4,6 +4,9 @@ import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import { LangProvider } from "@/context/lang-context"
 import { Toaster } from "@/components/ui/sonner"
+import { ScrollNavigation } from "@/components/scroll-navigation"
+import { WhatsAppFab } from "@/components/whatsapp-fab"
+import { CustomCursor } from "@/components/custom-cursor"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
@@ -50,6 +53,9 @@ export default function RootLayout({
         >
           <LangProvider>
             {children}
+            <CustomCursor />
+            <ScrollNavigation />
+            <WhatsAppFab />
             <Toaster />
           </LangProvider>
         </ThemeProvider>

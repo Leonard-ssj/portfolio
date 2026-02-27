@@ -125,14 +125,34 @@ export function HeroSection() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="relative size-28 overflow-hidden rounded-full border-2 border-primary/30 lg:size-32 shadow-lg shadow-primary/10">
-            <Image
-              src={siteConfig.avatar}
-              alt={`${siteConfig.name} avatar`}
-              fill
-              className="object-cover"
-              priority
-              unoptimized
+          <div className="relative size-32 lg:size-40">
+            <motion.div
+              aria-hidden="true"
+              className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/35 via-transparent to-primary/35"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+              style={{ filter: "blur(0.2px)" }}
+            />
+            <div
+              aria-hidden="true"
+              className="absolute -inset-1 rounded-full bg-primary/10 blur-xl"
+            />
+            <div className="absolute inset-1 rounded-full border border-primary/25 bg-card/40" />
+            <div className="absolute inset-2 overflow-hidden rounded-full border-2 border-primary/35 shadow-xl shadow-primary/10">
+              <Image
+                src={siteConfig.avatar}
+                alt={`${siteConfig.name} avatar`}
+                fill
+                className="object-cover"
+                priority
+                unoptimized
+              />
+            </div>
+            <motion.div
+              aria-hidden="true"
+              className="absolute left-1/2 top-0 size-2 -translate-x-1/2 rounded-full bg-primary"
+              animate={{ y: [0, 4, 0], opacity: [0.8, 1, 0.8] }}
+              transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
             />
           </div>
         </motion.div>

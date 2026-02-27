@@ -8,6 +8,7 @@ import { ProjectsSection } from "@/components/sections/projects"
 import { DocsSection } from "@/components/sections/docs"
 import { NotesPreviewSection } from "@/components/sections/notes-preview"
 import { ContactSection } from "@/components/sections/contact"
+import { PlaySection } from "@/components/sections/play"
 import { Footer } from "@/components/footer"
 
 export default function HomePage() {
@@ -24,6 +25,7 @@ export default function HomePage() {
         <DocsSection />
         <NotesPreviewSection />
         <ContactSection />
+        <PlaySection />
       </main>
       <Footer />
     </>

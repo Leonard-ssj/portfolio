@@ -19,10 +19,10 @@ export const siteConfig = {
 
 export const content = {
   nav: {
-    es: ["Inicio", "Sobre mi", "Habilidades", "Experiencia", "Proyectos", "Documentacion", "Notas", "Contacto"],
-    en: ["Home", "About", "Skills", "Experience", "Projects", "Documentation", "Notes", "Contact"],
+    es: ["Inicio", "Sobre mi", "Habilidades", "Experiencia", "Proyectos", "Documentacion", "Notas", "Contacto", "Juego"],
+    en: ["Home", "About", "Skills", "Experience", "Projects", "Documentation", "Notes", "Contact", "Game"],
   },
-  navAnchors: ["hero", "about", "skills", "experience", "projects", "docs", "notes-preview", "contact"],
+  navAnchors: ["hero", "about", "skills", "experience", "projects", "docs", "notes-preview", "contact", "play"],
   hero: {
     subtitle: {
       es: "Ingeniero en Sistemas enfocado en integracion y arquitectura de soluciones. Experiencia apoyando sistemas en produccion, validacion de APIs y trabajo colaborativo bajo metodologias agiles, con foco en claridad, calidad y entrega.",

@@ -2,6 +2,7 @@
 
 import { MessageCircle } from "lucide-react"
 import { motion } from "framer-motion"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { useLang } from "@/context/lang-context"
 import { siteConfig } from "@/content/content"
@@ -13,6 +14,7 @@ function normalizePhoneForWhatsApp(input: string) {
 
 export function WhatsAppFab() {
   const { t } = useLang()
+  const pathname = usePathname()
   const phone = normalizePhoneForWhatsApp(siteConfig.phone)
   const text = encodeURIComponent(
     t({
@@ -22,6 +24,7 @@ export function WhatsAppFab() {
   )
 
   if (!phone) return null
+  if (pathname?.startsWith("/diapositiva") || pathname?.startsWith("/diapositivaspresentacion")) return null
 
   return (
     <motion.div
@@ -49,4 +52,3 @@ export function WhatsAppFab() {
     </motion.div>
   )
 }
-

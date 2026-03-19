@@ -186,16 +186,16 @@ export const content = {
         {
           title: "Sistema de Gestion de Proyectos (SaaS)",
           type: "Fullstack / SaaS",
-          status: "En desarrollo",
+          status: "Publico",
           stack: ["Flask", "React", "Next.js", "JWT", "REST", "Multi-tenant"],
           bullets: [
-            "SaaS multi-tenant con arquitectura de monolito modular y capas claras.",
-            "Integraciones planeadas con servicios externos (Twilio, SendGrid, Stripe).",
-            "Documentacion y validacion continua de endpoints y flujos.",
+            "Plataforma SaaS multi-tenant en produccion con backend Flask y frontend Next.js/React.",
+            "Modulo de empleados, notificaciones y reportes para seguimiento y control operativo.",
+            "Calidad y entregables: pruebas E2E con Playwright, coleccion Postman y despliegue activo en Vercel (16 deployments).",
           ],
           links: [
             { label: "Repo", href: "https://github.com/Leonard-ssj/Sistema-Gestion-de-Proyectos" },
-            { label: "Prototipo", href: "https://v0-project-management-frontend-lake.vercel.app/" },
+            { label: "Produccion", href: "https://sistema-gestion-de-proyectos-dev.vercel.app" },
           ],
         },
         {
@@ -210,6 +210,20 @@ export const content = {
           ],
           links: [
             { label: "Prototipo", href: "https://agenda360demo.vercel.app/" },
+          ],
+        },
+        {
+          title: "Simon Dice por Voz",
+          type: "Sistemas Inteligentes / IoT",
+          status: "Publico",
+          stack: ["ESP32-S3", "Whisper WASM", "TypeScript", "Python", "C++", "Web Serial"],
+          bullets: [
+            "Juego Simon Dice controlado completamente por voz en espanol, sin servidores externos.",
+            "Reconocimiento de voz en el browser con Whisper WASM; comunicacion con ESP32-S3 via Web Serial.",
+            "Modo simulador en Python para desarrollo sin hardware; LEDs y buzzer en firmware C++.",
+          ],
+          links: [
+            { label: "Repo", href: "https://github.com/Leonard-ssj/simon-dice-por-voz" },
           ],
         },
       ],
@@ -246,16 +260,16 @@ export const content = {
         {
           title: "Project Management System (SaaS)",
           type: "Fullstack / SaaS",
-          status: "In progress",
+          status: "Public",
           stack: ["Flask", "React", "Next.js", "JWT", "REST", "Multi-tenant"],
           bullets: [
-            "Multi-tenant SaaS with a modular monolith approach and clear layering.",
-            "Planned integrations with external services (Twilio, SendGrid, Stripe).",
-            "Continuous documentation and validation of endpoints and flows.",
+            "Production multi-tenant SaaS with a Flask backend and Next.js/React frontend.",
+            "Employee module, notifications, and reports for operational visibility and control.",
+            "Quality and deliverables: Playwright E2E tests, a Postman collection, and active Vercel deployments (16 deployments).",
           ],
           links: [
             { label: "Repo", href: "https://github.com/Leonard-ssj/Sistema-Gestion-de-Proyectos" },
-            { label: "Prototype", href: "https://v0-project-management-frontend-lake.vercel.app/" },
+            { label: "Production", href: "https://sistema-gestion-de-proyectos-dev.vercel.app" },
           ],
         },
         {
@@ -270,6 +284,20 @@ export const content = {
           ],
           links: [
             { label: "Prototype", href: "https://agenda360demo.vercel.app/" },
+          ],
+        },
+        {
+          title: "Voice-Controlled Simon Says",
+          type: "Intelligent Systems / IoT",
+          status: "Public",
+          stack: ["ESP32-S3", "Whisper WASM", "TypeScript", "Python", "C++", "Web Serial"],
+          bullets: [
+            "Simon Says game fully controlled by voice in Spanish, no external servers required.",
+            "In-browser speech recognition using Whisper WASM; communicates with ESP32-S3 via Web Serial.",
+            "Python simulator mode for development without hardware; C++ firmware for LEDs and buzzer.",
+          ],
+          links: [
+            { label: "Repo", href: "https://github.com/Leonard-ssj/simon-dice-por-voz" },
           ],
         },
       ],

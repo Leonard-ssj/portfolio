@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Simon Dice por Voz preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1311"/>
+      <stop offset="1" stop-color="#081814"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.28" r="0.75">
+      <stop offset="0" stop-color="#4ADE80" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#4ADE80" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mono" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4ADE80" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#4ADE80" stop-opacity="0.12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+  <!-- browser-window mock -->
+  <g>
+    <rect x="170" y="110" width="940" height="500" rx="22" fill="#0C1A17" stroke="#4ADE80" stroke-opacity="0.18"/>
+    <rect x="170" y="110" width="940" height="60" rx="22" fill="#0F231E"/>
+    <rect x="170" y="148" width="940" height="22" fill="#0F231E"/>
+    <circle cx="208" cy="140" r="8" fill="#4ADE80" fill-opacity="0.45"/>
+    <circle cx="238" cy="140" r="8" fill="#2A3B36"/>
+    <circle cx="268" cy="140" r="8" fill="#2A3B36"/>
+    <rect x="320" y="128" width="700" height="24" rx="12" fill="#13302A"/>
+  </g>
+  <!-- monogram badge -->
+  <rect x="568" y="208" width="144" height="144" rx="34" fill="url(#mono)" stroke="#4ADE80" stroke-opacity="0.40"/>
+  <text x="640" y="300" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="56" font-weight="700" fill="#4ADE80">SD</text>
+  <!-- title + type -->
+  <text x="640" y="404" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="46" font-weight="700" fill="#F2F7F5">Simon Dice por Voz</text>
+  <text x="640" y="442" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="22" letter-spacing="3" fill="#4ADE80" fill-opacity="0.85">SISTEMAS INTELIGENTES / IOT</text>
+  <rect x="363" y="470" width="150" height="44" rx="22" fill="#4ADE80" fill-opacity="0.10" stroke="#4ADE80" stroke-opacity="0.30"/><text x="438" y="499" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="20" fill="#CBD5D1">ESP32-S3</text><rect x="529" y="470" width="198" height="44" rx="22" fill="#4ADE80" fill-opacity="0.10" stroke="#4ADE80" stroke-opacity="0.30"/><text x="628" y="499" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="20" fill="#CBD5D1">Whisper WASM</text><rect x="743" y="470" width="174" height="44" rx="22" fill="#4ADE80" fill-opacity="0.10" stroke="#4ADE80" stroke-opacity="0.30"/><text x="830" y="499" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="20" fill="#CBD5D1">Web Serial</text>
+</svg>

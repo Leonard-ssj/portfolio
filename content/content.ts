@@ -187,6 +187,7 @@ export const content = {
         },
         {
           title: "CRM Moderno (Fullstack)",
+          image: "/projects/crm-moderno.svg",
           type: "Fullstack / SaaS",
           status: "Publico",
           stack: ["React + TypeScript (Vite)", "Spring Boot", "MySQL", "JWT", "REST"],
@@ -202,6 +203,7 @@ export const content = {
         },
         {
           title: "Sistema de Agencia de Autos",
+          image: "/projects/agencia-autos.svg",
           type: "Fullstack / SaaS",
           status: "Publico",
           stack: ["Django", "PostgreSQL", "Tailwind CSS", "Triggers/SP", "Transacciones/Auditoria"],
@@ -247,6 +249,7 @@ export const content = {
         },
         {
           title: "Simon Dice por Voz",
+          image: "/projects/simon-dice.svg",
           type: "Sistemas Inteligentes / IoT",
           status: "Publico",
           stack: ["ESP32-S3", "Whisper WASM", "TypeScript", "Python", "C++", "Web Serial"],
@@ -261,6 +264,7 @@ export const content = {
         },
         {
           title: "ArchStudio",
+          image: "/projects/archstudio.svg",
           type: "Fullstack / SaaS",
           status: "Publico",
           stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
@@ -272,21 +276,6 @@ export const content = {
           links: [
             { label: "Repo", href: "https://github.com/Leonard-ssj/ArchStudio" },
             { label: "Produccion", href: "https://arch-studio-gilt.vercel.app" },
-          ],
-        },
-        {
-          title: "Portal Arquitectura",
-          type: "Frontend",
-          status: "Publico",
-          stack: ["HTML", "CSS", "JavaScript", "Vercel"],
-          bullets: [
-            "Portal web informativo de arquitectura desarrollado con HTML, CSS y JavaScript puro.",
-            "Maquetacion responsiva y navegacion ligera sin dependencias de framework.",
-            "Publicado en Vercel como sitio estatico de carga inmediata.",
-          ],
-          links: [
-            { label: "Repo", href: "https://github.com/Leonard-ssj/portal-arquitectura" },
-            { label: "Produccion", href: "https://portal-arquitectura-kappa.vercel.app" },
           ],
         },
       ],
@@ -324,6 +313,7 @@ export const content = {
         },
         {
           title: "Modern CRM (Fullstack)",
+          image: "/projects/crm-moderno.svg",
           type: "Fullstack / SaaS",
           status: "Public",
           stack: ["React + TypeScript (Vite)", "Spring Boot", "MySQL", "JWT", "REST"],
@@ -339,6 +329,7 @@ export const content = {
         },
         {
           title: "Car Dealership Management System",
+          image: "/projects/agencia-autos.svg",
           type: "Fullstack / SaaS",
           status: "Public",
           stack: ["Django", "PostgreSQL", "Tailwind CSS", "Triggers/SP", "Transactions/Audit"],
@@ -384,6 +375,7 @@ export const content = {
         },
         {
           title: "Voice-Controlled Simon Says",
+          image: "/projects/simon-dice.svg",
           type: "Intelligent Systems / IoT",
           status: "Public",
           stack: ["ESP32-S3", "Whisper WASM", "TypeScript", "Python", "C++", "Web Serial"],
@@ -398,6 +390,7 @@ export const content = {
         },
         {
           title: "ArchStudio",
+          image: "/projects/archstudio.svg",
           type: "Fullstack / SaaS",
           status: "Public",
           stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
@@ -409,21 +402,6 @@ export const content = {
           links: [
             { label: "Repo", href: "https://github.com/Leonard-ssj/ArchStudio" },
             { label: "Production", href: "https://arch-studio-gilt.vercel.app" },
-          ],
-        },
-        {
-          title: "Portal Arquitectura",
-          type: "Frontend",
-          status: "Public",
-          stack: ["HTML", "CSS", "JavaScript", "Vercel"],
-          bullets: [
-            "Informational architecture web portal built with plain HTML, CSS, and JavaScript.",
-            "Responsive layout and lightweight navigation with no framework dependencies.",
-            "Published on Vercel as a static site with instant load times.",
-          ],
-          links: [
-            { label: "Repo", href: "https://github.com/Leonard-ssj/portal-arquitectura" },
-            { label: "Production", href: "https://portal-arquitectura-kappa.vercel.app" },
           ],
         },
       ],

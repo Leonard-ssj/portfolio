@@ -19,6 +19,7 @@ export function ProjectsSection() {
   const { t } = useLang()
   const items = t(content.projects.items) as Array<{
     title: string
+    image?: string
     type: string
     status?: string
     stack: string[]
@@ -41,9 +42,20 @@ export function ProjectsSection() {
                 <div className="group relative h-full w-full max-w-[380px]">
                   <div className="absolute -inset-0.5 rounded-xl bg-gradient-to-br from-primary/15 via-transparent to-primary/15 opacity-0 blur transition-opacity duration-300 group-hover:opacity-100" />
                   <div className="glass-card relative flex h-full flex-col rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-0.5">
-                  <div className="mb-4 h-px w-full overflow-hidden rounded-full bg-border/60">
-                    <div className="h-full w-full animate-shimmer opacity-20" />
-                  </div>
+                  {project.image ? (
+                    <div className="-mx-6 -mt-6 mb-5 overflow-hidden rounded-t-xl border-b border-border/60">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        loading="lazy"
+                        className="aspect-video w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  ) : (
+                    <div className="mb-4 h-px w-full overflow-hidden rounded-full bg-border/60">
+                      <div className="h-full w-full animate-shimmer opacity-20" />
+                    </div>
+                  )}
                   <div className="flex items-center gap-3 mb-4">
                     <div className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary/20">
                       <Icon className="size-5" />

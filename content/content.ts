@@ -156,6 +156,7 @@ export const content = {
       es: [
         {
           title: "Sistema de Gestion Inmobiliario (SaaS)",
+          image: "/projects/inmobiliario.jpg",
           type: "Fullstack / SaaS",
           status: "En construccion",
           stack: ["Next.js 14", "TypeScript", "Supabase (PostgreSQL/RLS)", "FastAPI", "Tailwind CSS", "Multi-tenant"],
@@ -170,6 +171,7 @@ export const content = {
         },
         {
           title: "Egel-Pro (Simulador EGEL)",
+          image: "/projects/egel-pro.jpg",
           type: "Fullstack / EdTech",
           status: "Publico",
           stack: ["Next.js 14", "TypeScript", "Supabase", "Tailwind CSS", "Playwright", "GitHub Actions (CI/CD)"],
@@ -214,6 +216,7 @@ export const content = {
         },
         {
           title: "Sistema de Gestion de Proyectos (SaaS)",
+          image: "/projects/gestion-proyectos.jpg",
           type: "Fullstack / SaaS",
           status: "Publico",
           stack: ["Flask", "React", "Next.js", "JWT", "REST", "Multi-tenant"],
@@ -229,6 +232,7 @@ export const content = {
         },
         {
           title: "Agenda360 (SaaS Empresarial)",
+          image: "/projects/agenda360.jpg",
           type: "Fullstack / SaaS",
           status: "En construccion",
           stack: ["Next.js", "REST", "JWT", "Multi-tenant", "Cloud"],
@@ -259,6 +263,7 @@ export const content = {
       en: [
         {
           title: "Real Estate Management System (SaaS)",
+          image: "/projects/inmobiliario.jpg",
           type: "Fullstack / SaaS",
           status: "Building",
           stack: ["Next.js 14", "TypeScript", "Supabase (PostgreSQL/RLS)", "FastAPI", "Tailwind CSS", "Multi-tenant"],
@@ -273,6 +278,7 @@ export const content = {
         },
         {
           title: "Egel-Pro (EGEL Exam Simulator)",
+          image: "/projects/egel-pro.jpg",
           type: "Fullstack / EdTech",
           status: "Public",
           stack: ["Next.js 14", "TypeScript", "Supabase", "Tailwind CSS", "Playwright", "GitHub Actions (CI/CD)"],
@@ -317,6 +323,7 @@ export const content = {
         },
         {
           title: "Project Management System (SaaS)",
+          image: "/projects/gestion-proyectos.jpg",
           type: "Fullstack / SaaS",
           status: "Public",
           stack: ["Flask", "React", "Next.js", "JWT", "REST", "Multi-tenant"],
@@ -332,6 +339,7 @@ export const content = {
         },
         {
           title: "Agenda360 (Enterprise SaaS)",
+          image: "/projects/agenda360.jpg",
           type: "Fullstack / SaaS",
           status: "Building",
           stack: ["Next.js", "REST", "JWT", "Multi-tenant", "Cloud"],

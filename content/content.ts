@@ -259,6 +259,36 @@ export const content = {
             { label: "Repo", href: "https://github.com/Leonard-ssj/simon-dice-por-voz" },
           ],
         },
+        {
+          title: "ArchStudio",
+          type: "Fullstack / SaaS",
+          status: "Publico",
+          stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+          bullets: [
+            "Sitio para un estudio de arquitectura construido con Next.js, con portafolio de proyectos y servicios.",
+            "UI moderna y responsiva con Tailwind CSS, optimizada para presentacion de obra y captacion de clientes.",
+            "Desplegado en Vercel con rutas estaticas y carga rapida.",
+          ],
+          links: [
+            { label: "Repo", href: "https://github.com/Leonard-ssj/ArchStudio" },
+            { label: "Produccion", href: "https://arch-studio-gilt.vercel.app" },
+          ],
+        },
+        {
+          title: "Portal Arquitectura",
+          type: "Frontend",
+          status: "Publico",
+          stack: ["HTML", "CSS", "JavaScript", "Vercel"],
+          bullets: [
+            "Portal web informativo de arquitectura desarrollado con HTML, CSS y JavaScript puro.",
+            "Maquetacion responsiva y navegacion ligera sin dependencias de framework.",
+            "Publicado en Vercel como sitio estatico de carga inmediata.",
+          ],
+          links: [
+            { label: "Repo", href: "https://github.com/Leonard-ssj/portal-arquitectura" },
+            { label: "Produccion", href: "https://portal-arquitectura-kappa.vercel.app" },
+          ],
+        },
       ],
       en: [
         {
@@ -364,6 +394,36 @@ export const content = {
           ],
           links: [
             { label: "Repo", href: "https://github.com/Leonard-ssj/simon-dice-por-voz" },
+          ],
+        },
+        {
+          title: "ArchStudio",
+          type: "Fullstack / SaaS",
+          status: "Public",
+          stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+          bullets: [
+            "Website for an architecture studio built with Next.js, featuring a project portfolio and services.",
+            "Modern, responsive UI with Tailwind CSS, optimized for showcasing work and attracting clients.",
+            "Deployed on Vercel with static routes and fast page loads.",
+          ],
+          links: [
+            { label: "Repo", href: "https://github.com/Leonard-ssj/ArchStudio" },
+            { label: "Production", href: "https://arch-studio-gilt.vercel.app" },
+          ],
+        },
+        {
+          title: "Portal Arquitectura",
+          type: "Frontend",
+          status: "Public",
+          stack: ["HTML", "CSS", "JavaScript", "Vercel"],
+          bullets: [
+            "Informational architecture web portal built with plain HTML, CSS, and JavaScript.",
+            "Responsive layout and lightweight navigation with no framework dependencies.",
+            "Published on Vercel as a static site with instant load times.",
+          ],
+          links: [
+            { label: "Repo", href: "https://github.com/Leonard-ssj/portal-arquitectura" },
+            { label: "Production", href: "https://portal-arquitectura-kappa.vercel.app" },
           ],
         },
       ],

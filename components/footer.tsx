@@ -14,7 +14,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border/50">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-10 lg:flex-row lg:justify-between lg:px-6">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 pt-10 pb-[calc(2.5rem+env(safe-area-inset-bottom))] lg:flex-row lg:justify-between lg:px-6">
         <div className="flex flex-col items-center gap-2 lg:items-start">
           <span className="text-sm text-muted-foreground">
             {new Date().getFullYear()} {content.footer.copyright}

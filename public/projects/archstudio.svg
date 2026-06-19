@@ -4,32 +4,81 @@
       <stop offset="0" stop-color="#0A1311"/>
       <stop offset="1" stop-color="#081814"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.28" r="0.75">
-      <stop offset="0" stop-color="#2DD4BF" stop-opacity="0.28"/>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.8">
+      <stop offset="0" stop-color="#2DD4BF" stop-opacity="0.20"/>
       <stop offset="1" stop-color="#2DD4BF" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="mono" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2DD4BF" stop-opacity="0.30"/>
-      <stop offset="1" stop-color="#2DD4BF" stop-opacity="0.12"/>
-    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#2DD4BF" fill-opacity="0.06"/>
+    </pattern>
   </defs>
   <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect y="72" width="1280" height="648" fill="url(#grid)"/>
   <rect width="1280" height="720" fill="url(#glow)"/>
-  <!-- browser-window mock -->
-  <g>
-    <rect x="170" y="110" width="940" height="500" rx="22" fill="#0C1A17" stroke="#2DD4BF" stroke-opacity="0.18"/>
-    <rect x="170" y="110" width="940" height="60" rx="22" fill="#0F231E"/>
-    <rect x="170" y="148" width="940" height="22" fill="#0F231E"/>
-    <circle cx="208" cy="140" r="8" fill="#2DD4BF" fill-opacity="0.45"/>
-    <circle cx="238" cy="140" r="8" fill="#2A3B36"/>
-    <circle cx="268" cy="140" r="8" fill="#2A3B36"/>
-    <rect x="320" y="128" width="700" height="24" rx="12" fill="#13302A"/>
+
+  <!-- top app bar -->
+  <rect width="1280" height="72" fill="#0F231E"/>
+  <rect y="71" width="1280" height="1" fill="#2DD4BF" fill-opacity="0.18"/>
+  <text x="40" y="46" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="28" font-weight="700" fill="#2DD4BF">ArchStudio</text>
+  <text x="214" y="46" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="18" fill="#6E8B83">Semantic Architecture Editor</text>
+  <!-- layer tabs -->
+  <rect x="566" y="22" width="138" height="34" rx="17" fill="#2DD4BF" fill-opacity="0.14" stroke="#2DD4BF" stroke-opacity="0.35"/>
+  <text x="635" y="44" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="17" fill="#CBF5EE">Application</text>
+  <text x="752" y="44" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="17" fill="#6E8B83">Infrastructure</text>
+  <text x="858" y="44" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="17" fill="#6E8B83">Data</text>
+  <circle cx="1196" cy="36" r="7" fill="#2DD4BF" fill-opacity="0.45"/>
+  <circle cx="1222" cy="36" r="7" fill="#2A3B36"/>
+  <circle cx="1248" cy="36" r="7" fill="#2A3B36"/>
+
+  <!-- edges (behind nodes) -->
+  <g fill="none" stroke="#2DD4BF" stroke-opacity="0.42" stroke-width="2.5">
+    <path d="M320 222 H420"/>
+    <path d="M630 222 H740"/>
+    <path d="M525 258 V330"/>
+    <path d="M845 258 V366"/>
+    <path d="M630 402 H740"/>
   </g>
-  <!-- monogram badge -->
-  <rect x="568" y="208" width="144" height="144" rx="34" fill="url(#mono)" stroke="#2DD4BF" stroke-opacity="0.40"/>
-  <text x="640" y="300" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="56" font-weight="700" fill="#2DD4BF">AS</text>
-  <!-- title + type -->
-  <text x="640" y="404" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="46" font-weight="700" fill="#F2F7F5">ArchStudio</text>
-  <text x="640" y="442" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="22" letter-spacing="3" fill="#2DD4BF" fill-opacity="0.85">FULLSTACK / SAAS</text>
-  <rect x="394" y="470" width="137" height="44" rx="22" fill="#2DD4BF" fill-opacity="0.10" stroke="#2DD4BF" stroke-opacity="0.30"/><text x="462.5" y="499" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="20" fill="#CBD5D1">Next.js</text><rect x="547" y="470" width="174" height="44" rx="22" fill="#2DD4BF" fill-opacity="0.10" stroke="#2DD4BF" stroke-opacity="0.30"/><text x="634" y="499" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="20" fill="#CBD5D1">TypeScript</text><rect x="737" y="470" width="150" height="44" rx="22" fill="#2DD4BF" fill-opacity="0.10" stroke="#2DD4BF" stroke-opacity="0.30"/><text x="812" y="499" text-anchor="middle" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="20" fill="#CBD5D1">Tailwind</text>
+  <g fill="#2DD4BF" fill-opacity="0.55">
+    <circle cx="320" cy="222" r="4"/><circle cx="420" cy="222" r="4"/>
+    <circle cx="630" cy="222" r="4"/><circle cx="740" cy="222" r="4"/>
+    <circle cx="525" cy="330" r="4"/><circle cx="845" cy="366" r="4"/>
+    <circle cx="630" cy="402" r="4"/><circle cx="740" cy="402" r="4"/>
+  </g>
+
+  <!-- nodes -->
+  <g font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+    <!-- Web Front -->
+    <rect x="110" y="186" width="210" height="72" rx="14" fill="#0E1F1B" stroke="#2DD4BF" stroke-opacity="0.30"/>
+    <rect x="128" y="206" width="34" height="34" rx="9" fill="#2DD4BF" fill-opacity="0.18"/>
+    <text x="176" y="220" font-size="20" font-weight="600" fill="#EAF3F0">Web Front</text>
+    <text x="176" y="242" font-size="14" fill="#7F9A93">application</text>
+    <!-- API Gateway -->
+    <rect x="420" y="186" width="210" height="72" rx="14" fill="#0E1F1B" stroke="#2DD4BF" stroke-opacity="0.30"/>
+    <rect x="438" y="206" width="34" height="34" rx="9" fill="#2DD4BF" fill-opacity="0.18"/>
+    <text x="486" y="220" font-size="20" font-weight="600" fill="#EAF3F0">API Gateway</text>
+    <text x="486" y="242" font-size="14" fill="#7F9A93">gateway</text>
+    <!-- Order Service -->
+    <rect x="740" y="186" width="210" height="72" rx="14" fill="#0E1F1B" stroke="#2DD4BF" stroke-opacity="0.30"/>
+    <rect x="758" y="206" width="34" height="34" rx="9" fill="#2DD4BF" fill-opacity="0.18"/>
+    <text x="806" y="220" font-size="20" font-weight="600" fill="#EAF3F0">Order Service</text>
+    <text x="806" y="242" font-size="14" fill="#7F9A93">microservice</text>
+    <!-- Payment Service -->
+    <rect x="420" y="330" width="210" height="72" rx="14" fill="#0E1F1B" stroke="#2DD4BF" stroke-opacity="0.30"/>
+    <rect x="438" y="350" width="34" height="34" rx="9" fill="#2DD4BF" fill-opacity="0.18"/>
+    <text x="486" y="364" font-size="20" font-weight="600" fill="#EAF3F0">Payment Svc</text>
+    <text x="486" y="386" font-size="14" fill="#7F9A93">microservice</text>
+    <!-- Database -->
+    <rect x="740" y="366" width="210" height="72" rx="14" fill="#0E1F1B" stroke="#2DD4BF" stroke-opacity="0.30"/>
+    <rect x="758" y="386" width="34" height="34" rx="9" fill="#2DD4BF" fill-opacity="0.18"/>
+    <text x="806" y="400" font-size="20" font-weight="600" fill="#EAF3F0">Database</text>
+    <text x="806" y="422" font-size="14" fill="#7F9A93">data</text>
+  </g>
+
+  <!-- validation chip -->
+  <g font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+    <rect x="110" y="612" width="284" height="48" rx="24" fill="#2DD4BF" fill-opacity="0.10" stroke="#2DD4BF" stroke-opacity="0.30"/>
+    <path d="M138 636 l8 8 l14 -16" fill="none" stroke="#34D399" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="178" y="643" font-size="20" fill="#CBD5D1">Validation: no issues found</text>
+  </g>
+  <text x="1170" y="643" text-anchor="end" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="18" letter-spacing="2" fill="#2DD4BF" fill-opacity="0.8">REACT FLOW</text>
 </svg>

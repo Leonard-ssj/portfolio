@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -33,6 +33,25 @@ export const metadata: Metadata = {
       { url: "/icon.svg", type: "image/svg+xml" },
     ],
   },
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: "Leonardo Aldana",
+    statusBarStyle: "black-translucent",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f7f8fa" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b1014" },
+  ],
 }
 
 export default function RootLayout({

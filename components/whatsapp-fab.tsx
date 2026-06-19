@@ -31,7 +31,7 @@ export function WhatsAppFab() {
       initial={{ opacity: 0, y: 12, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.35 }}
-      className="fixed bottom-5 right-5 z-50"
+      className="fixed z-50 bottom-[calc(env(safe-area-inset-bottom)+1.25rem)] right-[calc(env(safe-area-inset-right)+1.25rem)]"
     >
       <motion.div
         animate={{ boxShadow: ["0 0 0 0 rgba(34,197,94,0.0)", "0 0 0 10px rgba(34,197,94,0.12)", "0 0 0 0 rgba(34,197,94,0.0)"] }}

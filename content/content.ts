@@ -155,6 +155,35 @@ export const content = {
     items: {
       es: [
         {
+          title: "Sistema de Gestion Inmobiliario (SaaS)",
+          type: "Fullstack / SaaS",
+          status: "En construccion",
+          stack: ["Next.js 14", "TypeScript", "Supabase (PostgreSQL/RLS)", "FastAPI", "Tailwind CSS", "Multi-tenant"],
+          bullets: [
+            "SaaS multi-tenant para gestion de lotes: proyectos, lotes, clientes, ventas y pagos/pagares.",
+            "Motor de documentos que autollena contratos y pagares desde los registros (FastAPI + python-docx).",
+            "Arquitectura database-per-tenant con Supabase (Auth, RLS, Storage); frontend Next.js desplegado en Vercel.",
+          ],
+          links: [
+            { label: "Produccion", href: "https://sistema-de-gestion-inmobilario-web.vercel.app" },
+          ],
+        },
+        {
+          title: "Egel-Pro (Simulador EGEL)",
+          type: "Fullstack / EdTech",
+          status: "Publico",
+          stack: ["Next.js 14", "TypeScript", "Supabase", "Tailwind CSS", "Playwright", "GitHub Actions (CI/CD)"],
+          bullets: [
+            "Simulador web para preparar el examen EGEL Plus ISOFT, con banco de reactivos y practica por areas.",
+            "Backend en Supabase (PostgreSQL, Auth) con migraciones y tipos generados; correos con React Email.",
+            "Pipeline CI/CD: typecheck, lint, pruebas unitarias y E2E con Playwright, y deploy automatico a Vercel.",
+          ],
+          links: [
+            { label: "Repo", href: "https://github.com/Leonard-ssj/Egel-Pro" },
+            { label: "Produccion", href: "https://egel-pro.vercel.app" },
+          ],
+        },
+        {
           title: "CRM Moderno (Fullstack)",
           type: "Fullstack / SaaS",
           status: "Publico",
@@ -228,6 +257,35 @@ export const content = {
         },
       ],
       en: [
+        {
+          title: "Real Estate Management System (SaaS)",
+          type: "Fullstack / SaaS",
+          status: "Building",
+          stack: ["Next.js 14", "TypeScript", "Supabase (PostgreSQL/RLS)", "FastAPI", "Tailwind CSS", "Multi-tenant"],
+          bullets: [
+            "Multi-tenant SaaS for land-lot management: projects, lots, clients, sales, and payments/promissory notes.",
+            "Document engine that auto-fills contracts and promissory notes from records (FastAPI + python-docx).",
+            "Database-per-tenant architecture on Supabase (Auth, RLS, Storage); Next.js frontend deployed on Vercel.",
+          ],
+          links: [
+            { label: "Production", href: "https://sistema-de-gestion-inmobilario-web.vercel.app" },
+          ],
+        },
+        {
+          title: "Egel-Pro (EGEL Exam Simulator)",
+          type: "Fullstack / EdTech",
+          status: "Public",
+          stack: ["Next.js 14", "TypeScript", "Supabase", "Tailwind CSS", "Playwright", "GitHub Actions (CI/CD)"],
+          bullets: [
+            "Web simulator to prepare for the EGEL Plus ISOFT exam, with a question bank and practice by area.",
+            "Supabase backend (PostgreSQL, Auth) with migrations and generated types; email templates with React Email.",
+            "CI/CD pipeline: typecheck, lint, unit and Playwright E2E tests, and automatic deploy to Vercel.",
+          ],
+          links: [
+            { label: "Repo", href: "https://github.com/Leonard-ssj/Egel-Pro" },
+            { label: "Production", href: "https://egel-pro.vercel.app" },
+          ],
+        },
         {
           title: "Modern CRM (Fullstack)",
           type: "Fullstack / SaaS",
